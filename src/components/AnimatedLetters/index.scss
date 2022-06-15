@@ -1,9 +1,9 @@
 .text-animate {
   display: inline-block;
   opacity: 0;
-  animation: bounceIn;
-  animation-duration: 1s;
-  animation-delay: 1s;
+  animation: flash;
+  animation-duration: 3s;
+  animation-delay: 3s;
   animation-fill-mode: forwards;
   min-width: 10px;
 }
@@ -14,8 +14,8 @@
   animation-fill-mode: both;
 
   &:hover {
-    animation: rubberBand 1s;
-    color: #ffd700;
+    animation: flash 1s;
+    color: #0084ff;
   }
 }
 

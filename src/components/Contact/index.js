@@ -20,12 +20,7 @@ const Contact = () => {
     e.preventDefault()
 
     emailjs
-      .sendForm(
-        'gmail',
-        'template_YeJhZkgb',
-        form.current,
-        'your-token'
-      )
+      .sendForm('gmail', 'template_YeJhZkgb', form.current, 'your-token')
       .then(
         () => {
           alert('Message successfully sent!')
@@ -90,25 +85,22 @@ const Contact = () => {
           </div>
         </div>
         <div className="info-map">
-          Slobodan Gajić,
+          Danielle Pont
           <br />
-          Serbia,
+          Auckland, New Zealand
           <br />
-          Branka RadiČevića 19, 22000 <br />
-          Sremska Mitrovica <br />
-          <br />
-          <span>freelancerslobodan@gmail.com</span>
+          <span>danielleshereepont@outlook.com</span>
         </div>
         <div className="map-wrap">
           <MapContainer center={[44.96366, 19.61045]} zoom={13}>
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
             <Marker position={[44.96366, 19.61045]}>
-              <Popup>Sloba lives here, come over for a cup of coffee :)</Popup>
+              <Popup>Home</Popup>
             </Marker>
           </MapContainer>
         </div>
       </div>
-      <Loader type="pacman" />
+      <Loader type="ball-pulse" />
     </>
   )
 }
